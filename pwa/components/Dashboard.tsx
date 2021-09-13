@@ -1,6 +1,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image"
 
 const Welcome = () => (
   <>
@@ -32,8 +33,8 @@ const Welcome = () => (
             <p>Click on any of the links for Customers, Vehicles, or Service Tickets in the Menu to start exploring!</p>
             <hr />
           </div>
-          <div className="main__other">
             <h6>Checkout the Docs that are generated for this application by API Platform:</h6>
+          <div className="main__other">
             <div className="other__bloc">
               <div className="other__circle">
                 <Api/>
@@ -44,7 +45,23 @@ const Welcome = () => (
                 </h3>
               </div>
             </div>
+            </div>
+            <hr />
+            <h6>Last but not least... check out the source code for this project!</h6>
+            <div className="main__other">
+            <div className="other__bloc">
+              <div className="other__circle">
+                <Image src="/Octocat.png" alt="" width="128px" height="106px" layout="fixed"/>
+              </div>
+              <div className="other__content">
+                <h3>
+                  <a href="/docs">The Source Code</a>
+                </h3>
+              </div>
+            </div>
+            
           </div>
+          <hr />
             <p>This demo was made for iService Auto by Zach Lankton.  The iService Logo was borrowed from your website specifically for the purposes of this demo and will be promptly taken down when this demo is no longer needed.
             </p>
         </div>
@@ -189,7 +206,7 @@ const Welcome = () => (
                     height: 170px;
                     box-sizing: border-box;
                     text-align: left;
-                    width: 40%;
+                    
                 }
 
                 .other__bloc:not(:last-of-type) {
@@ -361,7 +378,7 @@ const Welcome = () => (
                     }
                     .welcome__flag,
                     .main__other {
-                        display: none;
+                        
                     }
                     .main__content {
                         padding: 10px;
